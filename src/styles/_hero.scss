@@ -1,0 +1,66 @@
+@use 'variables';
+.hero{
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/00.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+
+    h1{
+        text-align: center;
+        margin: 12px 0;
+    }
+    span{
+        height: 10vh;
+        color: variables.$cor02;
+    }
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(variables.$corG1, variables.$corG2);
+        content: "";
+        opacity: 0.7;        
+    }
+
+    .container{
+        position: relative;
+    }
+
+    &__text{
+        text-align: center;
+        margin: 12px 0;
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 700;
+    }
+
+    &__logo{
+        margin: 0 auto;
+        height: 300px;
+        display: block;
+    }
+    .logo2{
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    @media (max-width: 640px){
+            padding: 40px;
+        &__logo{
+            height: 100px;
+        }
+        &__text{
+            font-size: 24;
+            line-height: 32px;
+            margin: 24px 0;
+        }
+    }
+
+
+}

@@ -1,0 +1,25 @@
+@use '../variables';
+.button{
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    text-align: center;
+    white-space: nowrap;
+
+    &--primary{
+        color: variables.$cor00;
+        background-color: variables.$corG2;
+        padding: 0 16px;
+    }
+    @media (max-width: 640px){
+        display: block;
+        width: 100%;
+    }
+    @media (max-width: 1024px) and (min-width: 641px){
+        margin-left: 40px;
+    }
+}

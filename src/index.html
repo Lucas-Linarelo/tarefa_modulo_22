@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa módulo 22 - Aniversário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header header class="hero" id="hero-section">
+        <audio id="audioPlayer" src="audio/00.mp3"></audio>
+        <div class="container" data-aos="fade-up" data-aos-delay="500">
+            <img class="hero__logo" src="./images/01.png" alt="EBAC">
+            <h1>Prepare-se para comemorar comigo! A festa está chegando e vai ser épica!</h1>
+            <p class="hero__text">
+                <span id="contador" data-aos="fade-up" data-aos-delay="1200" data-aos-duration="3000"></span>
+            </p>
+        </div>
+        <div class="infos-bar container" data-aos="fade-down" data-aos-duration="750" data-aos-delay="1000">
+            <ul class="infos-bar__infos">
+                <li class="infos-bar__infos__item">
+                    <b>Quando</b>
+                    26/04/2025 Á partir das 16hrs
+                </li>
+                <li class="infos-bar__infos__item">
+                    <b>Onde</b>
+                    Rod. dos Bandeirantes, km 72, Vinhedo.
+                </li>
+            </ul>
+            <a href="https://www.hopihari.com.br/temporadaHopiPride2025" class="button button--primary">
+                Adiquira já!
+            </a>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-duration="5000" data-aos-delay="1250" >
+            <img class="hero__logo logo2" src="./images/02.png" alt="">
+        </div>
+    </header>
+    
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('audioPlayer');
+            audio.muted = false;
+            audio.play().catch(error => {
+            console.log('Autoplay bloqueado pelo navegador:', error);
+            });
+        });
+    </script>
+</body>
+</html>
